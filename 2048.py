@@ -61,6 +61,13 @@ def tilt_field(f, cmd):
         if cmd=="d": liste=sert(f2,liste, r=[n], reverse = True)
     return f2
 
+def max_tile(f):
+    m = 0
+    for row in f:
+        for ele in row:
+            if ele > m:
+                m = ele
+
 
 def pprint(f):
     for row in f:
