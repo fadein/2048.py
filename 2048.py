@@ -79,7 +79,7 @@ while not (f==tilt_field(f,"w")==tilt_field(f,"a")
     cmd=""
     pprint(f)
     while cmd not in["w","a","s","d"]:
-        cmd=input(">")
+        cmd=raw_input(">")
     f2=tilt_field(f,cmd)
     if f2!=f:f=add_random(f2)
     if max_tile(f)==2048:
