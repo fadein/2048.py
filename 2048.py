@@ -49,11 +49,18 @@ def tilt_field(f, cmd):
         start_len=len(liste)
         while 0 in liste:
             liste.remove(0)
-        liste+=[0]*(start_len-len(liste))
         i=0
-        while icurrent_max:
-            current_max=f[y][x]
-    return current_max
+        while i < len(liste) -1:
+            if liste[i] == liste[i + 1]:
+                liste[i] = liste[i] * 2
+            i = i + 1
+        liste += [0] * (start_len - len(liste))
+        if cmd=="w": liste=sert(f2,liste, c=[n])
+        if cmd=="a": liste=sert(f2,liste, r=[n])
+        if cmd=="s": liste=sert(f2,liste, c=[n], reverse = True)
+        if cmd=="d": liste=sert(f2,liste, r=[n], reverse = True)
+    return f2
+
 
 def pprint(f):
     for row in f:
