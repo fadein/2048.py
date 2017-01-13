@@ -78,5 +78,5 @@ while not (f==tilt_field(f,"w")==tilt_field(f,"a")
     if max_tile(f)==2048:
         print("you win")
         sys.exit(1)
-pprint(field)
+pprint(f)
 print("you lose")
